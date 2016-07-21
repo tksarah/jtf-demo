@@ -1,0 +1,14 @@
+---
+- name: Building WordPress
+  hosts: dc
+  gather_facts: no
+
+  roles:
+    - dc
+
+- name: On DigitalOcean
+  hosts: launched-dc
+  gather_facts: yes
+
+  roles:
+    - wordpress
